@@ -125,15 +125,8 @@ export const HeroSection = ({ id }: { id: string }) => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="mt-4 text-center font-light text-white/80 tracking-wide md:text-lg">
-                        I build full-stack products that ship, scale, and hold up under pressure
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        className="mt-3 text-center text-sm md:text-base text-white/60 tracking-wide">
-                        I work with startups and businesses to turn ideas into reliable, production-ready software.
+                        className="mt-4 text-center text-white/80 tracking-wide md:text-lg leading-relaxed">
+                        I specialize in building scalable, production-ready applications that ship, scale, and solve complex business challenges.
                     </motion.p>
                 </div>
                 <motion.div
