@@ -4,15 +4,23 @@ import { Card } from "@/components/Card";
 import { Fragment } from "react";
 import { testimonials } from "../../profile.config";
 import { testimonialsSectionId } from "./constants";
+import { motion } from "framer-motion";
+
 export const TestimonialsSection = () => {
     return (
         <div className="py-16 lg:py-24">
             <section className="container" id={testimonialsSectionId}>
-                <SectionHeader
-                    heading1="Happy Clients"
-                    heading2="What Clients Say About Me"
-                    paragraph="Don't just take my word for it. See what my clients have to say about my work."
-                />
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}>
+                    <SectionHeader
+                        heading1="Happy Clients"
+                        heading2="What Clients Say About Me"
+                        paragraph="Don't just take my word for it. See what my clients have to say about my work."
+                    />
+                </motion.div>
                 <div
                     className="mt-12 lg:mt-20 flex overflow-x-clip py-4 -my-4"
                     style={{

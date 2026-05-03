@@ -6,6 +6,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { contactSectionId, projectsSectionId } from "./constants";
+import { motion } from "framer-motion";
 
 export const HeroSection = ({ id }: { id: string }) => {
     return (
@@ -99,7 +100,12 @@ export const HeroSection = ({ id }: { id: string }) => {
             </div>
             <div className="container relative z-10">
                 <div className="flex flex-col justify-center items-center">
-                    <Image src={memojiImage} className="size-[100px]" alt="Person peeking from behind laptop" />
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}>
+                        <Image src={memojiImage} className="size-[100px]" alt="Person peeking from behind laptop" />
+                    </motion.div>
                     <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-3.5">
                         <div className="bg-green-500 size-2.5 rounded-full relative z-0">
                             <div className="absolute inset-0 bg-green-500 rounded-full animate-ping -z-10"></div>
@@ -108,30 +114,46 @@ export const HeroSection = ({ id }: { id: string }) => {
                     </div>
                 </div>
                 <div className="max-w-lg mx-auto">
-                    <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
                         Kibet Brian
-                    </h1>
-                    <p className="mt-4 text-center font-light text-white/80 tracking-wide md:text-lg">
-                        Software Engineer | ML Engineer | Cloud Security
-                    </p>
-                    <p className="mt-3 text-center text-sm md:text-base text-white/60 tracking-wide">
-                        No bugs were harmed in the making of this portfolio. Some were, actually. They deserved it.
-                    </p>
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="mt-4 text-center font-light text-white/80 tracking-wide md:text-lg">
+                        I build full-stack products that ship, scale, and hold up under pressure
+                    </motion.p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="mt-3 text-center text-sm md:text-base text-white/60 tracking-wide">
+                        I work with startups and businesses to turn ideas into reliable, production-ready software.
+                    </motion.p>
                 </div>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
                     <a href={"#" + projectsSectionId}>
-                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+                        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white/5 transition duration-300">
                             <span className="font-semibold">Explore My Work</span>
                             <ArrowDown className="size-4" />
                         </button>
                     </a>
                     <a href={"#" + contactSectionId}>
-                        <button className="inline-flex items-center gap-2 px-6 h-12 border border-white text-gray-900 bg-white rounded-xl">
+                        <button className="inline-flex items-center gap-2 px-6 h-12 border border-white text-gray-900 bg-white rounded-xl hover:bg-gray-100 transition duration-300">
+                            <span className="font-semibold">Book a Call</span>
                             <span>👋</span>
-                            <span className="font-semibold">Let&apos;s Connect</span>
                         </button>
                     </a>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

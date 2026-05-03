@@ -43,10 +43,8 @@ import DbtIcon from "@/assets/icons/toolbox/dbt.svg";
 import SparkIcon from "@/assets/icons/toolbox/spark.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import distressapp from "@/assets/images/distress-app.jpg";
-import markshifyLandingPage from "@/assets/images/markshify-landing-page.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
-import shanzilAvatar from "@/assets/images/shanzil-avatar.webp";
 
 const CONFIG = {
     email: "hello@kibetbrian.codes",
