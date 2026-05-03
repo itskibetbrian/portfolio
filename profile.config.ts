@@ -458,6 +458,18 @@ const CONFIG = {
             text: "Brian provided excellent data analysis that helped us make better operational decisions. He transformed complex datasets into clear, actionable insights. A thoughtful professional who asks the right questions to deliver meaningful results.",
             avatar: memojiAvatar3,
         },
+        {
+            name: "Mr. Chege Njoroge",
+            position: "Group CEO @ BuildAfrique",
+            text: "Brian is a top-tier engineer who transformed our complex construction platform into a high-performance digital asset. His ability to navigate both technical architecture and user experience is rare. We've seen a marked increase in engagement since the launch.",
+            avatar: grownUpMarketingAvatar,
+        },
+        {
+            name: "Mr. Steven Muriuki",
+            position: "Chairman @ Ultimate MedLink",
+            text: "Working with Brian was a seamless experience. He built a professional, trustworthy platform that perfectly represents our mission to connect Africa with global healthcare. His attention to detail in patient journey mapping was exceptional.",
+            avatar: memojiAvatar3,
+        },
     ],
 };
 
