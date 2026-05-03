@@ -54,11 +54,11 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                             onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
                             animate={{
                                 scale: expandedIndex === index ? 1.02 : 1,
-                                zIndex: expandedIndex === index ? 50 : 10 + index,
+                                zIndex: expandedIndex === index ? 90 : 10 + index,
                             }}
                             className="sticky cursor-pointer transition-shadow duration-300 mt-12 md:mt-16 lg:mt-20 first:mt-0"
                             style={{
-                                top: `calc(64px + ${index * (isMobile ? 20 : 40)}px)`,
+                                top: `calc(72px + ${index * (isMobile ? 12 : 20)}px)`,
                                 boxShadow: expandedIndex === index ? "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" : "none",
                             }}>
                             <Card className="px-8 pt-8 pb-12 md:pt-12 md:px-10 lg:px-20 lg:pt-16">

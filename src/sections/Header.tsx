@@ -121,7 +121,7 @@ export const Header = ({
     );
 
     return (
-        <div className="flex justify-center items-center fixed top-3 w-full z-10">
+        <div className="flex justify-center items-center fixed top-3 w-full z-[100]">
             <nav className="flex gap-3 p-0.5 border border-white/30 rounded-full bg-white/10 backdrop-blur">
                 {sectionIds.map((sectionId) => {
                     const labels: Record<string, string> = {
