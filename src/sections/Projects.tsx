@@ -9,6 +9,16 @@ import { useState, useEffect } from "react";
 
 export const ProjectsSection = ({ id }: { id: string }) => {
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     // Close expanded card on scroll
     useEffect(() => {
@@ -33,22 +43,22 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                     heading2="Featured Projects"
                     paragraph="From backend logic to polished UI — here’s how I bring full-stack ideas to life."
                 />
-                <div className="flex flex-col gap-20 mt-10 md:mt-20">
+                <div className="flex flex-col mt-10 md:mt-20">
                     {portfolioProjects.map((project, index) => (
                         <motion.div
                             key={project.title}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
                             animate={{
                                 scale: expandedIndex === index ? 1.02 : 1,
-                                zIndex: expandedIndex === index ? 50 : 0,
+                                zIndex: expandedIndex === index ? 50 : 10 + index,
                             }}
-                            className="sticky cursor-pointer transition-shadow duration-300"
+                            className="sticky cursor-pointer transition-shadow duration-300 mt-12 md:mt-16 lg:mt-20 first:mt-0"
                             style={{
-                                top: `calc(100px + ${index * 48}px)`,
+                                top: `calc(64px + ${index * (isMobile ? 20 : 40)}px)`,
                                 boxShadow: expandedIndex === index ? "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" : "none",
                             }}>
                             <Card className="px-8 pt-8 pb-12 md:pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16">
@@ -95,6 +105,8 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                             </Card>
                         </motion.div>
                     ))}
+                    {/* Large spacer to ensure all sticky cards can settle at the top without being pushed by the container end */}
+                    <div className="h-[60vh] md:h-[80vh] pointer-events-none" />
                 </div>
             </div>
         </section>

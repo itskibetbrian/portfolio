@@ -285,6 +285,32 @@ const CONFIG = {
     ],
     portfolioProjects: [
         {
+            company: "Nogeybix Labs",
+            year: "2024 - Present",
+            title: "Founder & Lead Engineer",
+            results: [
+                { title: "Spearheading the development of high-impact digital products and custom software solutions" },
+                { title: "Directing technical strategy and architecture for a diverse portfolio of client and internal projects" },
+                { title: "Building and scaling production-ready systems that deliver measurable business results" },
+            ],
+            link: "https://nogeybix.com",
+            image: "/images/nogeybixlabs.png",
+            linkText: "Visit Nogeybix Labs",
+        },
+        {
+            company: "Penote",
+            year: "2024",
+            title: "Penote - Secure Note Taking",
+            results: [
+                { title: "Designed and developed a secure, local-first note-taking application for Android" },
+                { title: "Implemented end-to-end encryption for sensitive notes and biometric authentication" },
+                { title: "Optimized storage and sync logic for a seamless offline-to-online experience" },
+            ],
+            link: "https://play.google.com/store/apps/details?id=com.nogeybix.p3note",
+            image: "/images/penote.jpg",
+            linkText: "View on Play Store",
+        },
+        {
             company: "Locl",
             year: "2022",
             title: "Backend for Social Media Platform",

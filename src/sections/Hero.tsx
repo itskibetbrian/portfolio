@@ -150,7 +150,6 @@ export const HeroSection = ({ id }: { id: string }) => {
                     <a href={"#" + contactSectionId}>
                         <button className="inline-flex items-center gap-2 px-6 h-12 border border-white text-gray-900 bg-white rounded-xl hover:bg-gray-100 transition duration-300">
                             <span className="font-semibold">Book a Call</span>
-                            <span>👋</span>
                         </button>
                     </a>
                 </motion.div>
