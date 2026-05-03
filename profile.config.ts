@@ -296,6 +296,7 @@ const CONFIG = {
             link: "https://nogeybix.com",
             image: "/images/nogeybixlabs.png",
             linkText: "Visit Nogeybix Labs",
+            tags: ["Technical Leadership", "System Architecture", "Full-Stack Development"],
         },
         {
             company: "Penote",
@@ -309,6 +310,7 @@ const CONFIG = {
             link: "https://play.google.com/store/apps/details?id=com.nogeybix.p3note",
             image: "/images/penote.jpg",
             linkText: "View on Play Store",
+            tags: ["Android", "Security", "Encryption", "Local-First"],
         },
         {
             company: "Locl",
@@ -322,6 +324,7 @@ const CONFIG = {
             link: "/images/flowchart-local-social.png",
             image: localSocialPostmanPage,
             linkText: "View Flowchart",
+            tags: ["Node.js", "PostgreSQL", "API Design", "Geospatial"],
         },
         {
             company: "Ultimate MedLink Ltd",
@@ -335,6 +338,7 @@ const CONFIG = {
             link: "https://uml.co.ke",
             image: "/images/uml.png",
             linkText: "View Live Site",
+            tags: ["Next.js", "Healthcare Tech", "UI/UX", "SEO"],
         },
         {
             company: "GPS Travel",
@@ -348,6 +352,7 @@ const CONFIG = {
             link: "https://gpstravel.co.ke",
             image: "/images/gpstravel.png",
             linkText: "View Live Site",
+            tags: ["React", "Travel Tech", "API Integration"],
         },
         {
             company: "Destress",
@@ -361,6 +366,7 @@ const CONFIG = {
             link: "@/assets/images/destress.jpg",
             image: distressapp,
             linkText: "View Screenshots",
+            tags: ["Android", "React Native", "Safety Tech"],
         },
         {
             company: "BuildAfrique",
@@ -374,6 +380,7 @@ const CONFIG = {
             link: "https://buildafrique.com",
             image: "/images/buildAfrique.png",
             linkText: "View Live Site",
+            tags: ["Next.js", "Performance", "SEO"],
         },
         {
             company: "Penda Health",
@@ -387,6 +394,7 @@ const CONFIG = {
             link: "https://pendahealth.com",
             image: "/images/pendahealth.png",
             linkText: "View Project",
+            tags: ["Internal Tools", "Process Optimization", "Data Analytics"],
         },
         {
             company: "Numida Africa",
@@ -400,6 +408,7 @@ const CONFIG = {
             link: "https://play.google.com/store/apps/details?id=com.numidatech.numida",
             image: "/images/numidaAfrica.jpg",
             linkText: "View Project",
+            tags: ["Fintech", "Security", "Scalability"],
         },
         {
             company: "iCyberEnterprises LLC",
@@ -413,6 +422,7 @@ const CONFIG = {
             link: "https://icyberenterprises.com",
             image: "/images/icyber.png",
             linkText: "View Project",
+            tags: ["Web Architecture", "Maintainability", "Integration"],
         },
         {
             company: "xGscore.io",
@@ -426,6 +436,7 @@ const CONFIG = {
             link: "https://xgscore.io",
             image: "/images/xgscore.png",
             linkText: "View Site",
+            tags: ["Analytics", "Data Visualization", "Real-time"],
         },
     ],
     testimonials: [

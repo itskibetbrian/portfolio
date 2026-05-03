@@ -72,6 +72,15 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                         <h3 className="font-serif text-2xl md:text-4xl lg:max-w-sm mt-2 md:mt-5">
                                             {project.title}
                                         </h3>
+                                        <div className="flex flex-wrap gap-2 mt-4">
+                                            {project.tags?.map((tag: string) => (
+                                                <span
+                                                    key={tag}
+                                                    className="px-2 py-1 text-[10px] md:text-xs font-semibold tracking-wider uppercase text-emerald-300/80 border border-emerald-300/20 rounded-lg bg-emerald-300/5">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
                                         <hr className="border-t-2 border-white/10 mt-4 md:mt-5" />
                                         <ul className="mt-4 md:mt-5 flex flex-col gap-4">
                                             {project.results.map((result) => (
