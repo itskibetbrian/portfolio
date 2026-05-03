@@ -61,8 +61,8 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                 top: `calc(64px + ${index * (isMobile ? 20 : 40)}px)`,
                                 boxShadow: expandedIndex === index ? "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" : "none",
                             }}>
-                            <Card className="px-8 pt-8 pb-12 md:pb-0 md:pt-12 md:px-10 lg:px-20 lg:pt-16">
-                                <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+                            <Card className="px-8 pt-8 pb-12 md:pt-12 md:px-10 lg:px-20 lg:pt-16">
+                                <div className="flex flex-col">
                                     <div className="lg:pb-8">
                                         <div className="inline-flex gap-2 uppercase font-bold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text tracking-widest md:tracking-normal text-sm md:text-base">
                                             <span>{project.company}</span>
@@ -81,18 +81,37 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                                 </span>
                                             ))}
                                         </div>
-                                        <hr className="border-t-2 border-white/10 mt-4 md:mt-5" />
-                                        <ul className="mt-4 md:mt-5 flex flex-col gap-4">
+
+                                        <ul className="mt-6 flex flex-col gap-4">
                                             {project.results.map((result) => (
                                                 <li
                                                     key={result.title}
-                                                    className="inline-flex gap-2 text-white/50 font-light text-sm md:text-base">
-                                                    <CheckIcon className="size-5 md:size-6" />
+                                                    className="inline-flex gap-3 text-white/60 font-light text-sm md:text-base leading-relaxed">
+                                                    <CheckIcon className="size-5 md:size-6 text-emerald-300/50 shrink-0" />
                                                     <span>{result.title}</span>
                                                 </li>
                                             ))}
                                         </ul>
-                                        <div className="flex flex-col md:flex-row gap-4 my-8">
+
+                                        <AnimatePresence>
+                                            {expandedIndex === index && (
+                                                <motion.div
+                                                    initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                                                    animate={{ opacity: 1, height: "auto", marginTop: 32 }}
+                                                    exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                                                    className="relative overflow-hidden rounded-2xl border border-white/10">
+                                                    <Image
+                                                        src={project.image}
+                                                        alt={project.title}
+                                                        width={1200}
+                                                        height={675}
+                                                        className="w-full h-auto object-cover"
+                                                    />
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
+
+                                        <div className="flex flex-col md:flex-row gap-4 mt-8">
                                             <a href={project.link} target="_blank" className="w-full md:w-auto">
                                                 <button className="bg-white text-gray-950 h-12 rounded-xl w-full md:px-6 font-semibold inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition duration-300">
                                                     <span>{project.linkText}</span>
@@ -100,15 +119,6 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                                                 </button>
                                             </a>
                                         </div>
-                                    </div>
-                                    <div className="relative">
-                                        <Image
-                                            src={project.image}
-                                            alt={project.title}
-                                            width={600}
-                                            height={400}
-                                            className="mb-0 md:-mb-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none border-2 border-white/10 rounded-xl"
-                                        />
                                     </div>
                                 </div>
                             </Card>
