@@ -47,7 +47,7 @@ import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 
 const CONFIG = {
-    email: "hello@kibetbrian.codes",
+    email: "its.kibetbrian@gmail.com",
     toolboxItems: [
         {
             title: "HTML5",
