@@ -19,13 +19,13 @@ export const metadata: Metadata = {
         description,
         url: "https://kibetbrian.codes",
         type: "website",
-        images: ["/images/nogeybixlabs.png"],
+        images: ["/images/memoji-computer.png"],
     },
     twitter: {
         card: "summary_large_image",
         title: "Kibet Brian",
         description,
-        images: ["/images/nogeybixlabs.png"],
+        images: ["/images/memoji-computer.png"],
     },
 };
 

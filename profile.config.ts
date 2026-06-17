@@ -43,7 +43,6 @@ import DbtIcon from "@/assets/icons/toolbox/dbt.svg";
 import SparkIcon from "@/assets/icons/toolbox/spark.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 
 const CONFIG = {
     email: "its.kibetbrian@gmail.com",
