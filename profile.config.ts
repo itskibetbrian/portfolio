@@ -428,7 +428,7 @@ const CONFIG = {
             name: "Jamie Wilkinson",
             position: "CTO @ xgscore.io",
             text: "Brian delivered exceptional work on our analytics platform. His full-stack solutions were both elegant and robust, demonstrating deep understanding of modern web technologies. A reliable developer who communicates clearly and delivers on time.",
-            avatar: grownUpMarketingAvatar,
+            avatar: memojiAvatar3,
         },
         {
             name: "Victor Vodegel",
@@ -446,7 +446,7 @@ const CONFIG = {
             name: "Mr. Chege Njoroge",
             position: "Group CEO @ BuildAfrique",
             text: "Brian is a top-tier engineer who transformed our complex construction platform into a high-performance digital asset. His ability to navigate both technical architecture and user experience is rare. We've seen a marked increase in engagement since the launch.",
-            avatar: grownUpMarketingAvatar,
+            avatar: memojiAvatar3,
         },
         {
             name: "Mr. Steven Muriuki",
