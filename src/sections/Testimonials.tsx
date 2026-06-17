@@ -1,10 +1,20 @@
 import { SectionHeader } from "@/components/SectionHeader";
-import Image from "next/image";
 import { Card } from "@/components/Card";
 import { Fragment } from "react";
 import { testimonials } from "../../profile.config";
 import { testimonialsSectionId } from "./constants";
 import { motion } from "framer-motion";
+
+const getInitials = (name: string) => {
+    const parts = name
+        .trim()
+        .split(" ")
+        .filter(Boolean)
+        .slice(0, 2)
+        .map((part) => part[0].toUpperCase());
+
+    return parts.length === 0 ? "" : parts.join("");
+};
 
 export const TestimonialsSection = () => {
     return (
@@ -34,14 +44,8 @@ export const TestimonialsSection = () => {
                                         key={testimonial.name}
                                         className="max-w-xs md:max-w-md md:p-8 hover:-rotate-3 transition duration-300">
                                         <div className="flex items-center gap-4">
-                                            <div className="inline-flex items-center justify-center size-14 bg-gray-700 rounded-full flex-shrink-0 overflow-hidden">
-                                                <Image
-                                                    src={testimonial.avatar}
-                                                    alt={testimonial.name}
-                                                    className="max-h-full"
-                                                    unoptimized
-                                                    loading="lazy"
-                                                />
+                                            <div className="inline-flex items-center justify-center size-14 rounded-full bg-emerald-300/10 text-emerald-300 font-semibold text-sm flex-shrink-0">
+                                                {getInitials(testimonial.name)}
                                             </div>
                                             <div>
                                                 <div className="font-semibold">{testimonial.name}</div>

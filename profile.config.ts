@@ -42,7 +42,6 @@ import JupyterIcon from "@/assets/icons/toolbox/jupyter.svg";
 import DbtIcon from "@/assets/icons/toolbox/dbt.svg";
 import SparkIcon from "@/assets/icons/toolbox/spark.svg";
 import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
-import distressapp from "@/assets/images/distress-app.jpg";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import grownUpMarketingAvatar from "@/assets/images/grown-up-marketing.webp";
 
@@ -353,20 +352,6 @@ const CONFIG = {
             image: "/images/gpstravel.png",
             linkText: "View Live Site",
             tags: ["React", "Travel Tech", "API Integration"],
-        },
-        {
-            company: "Destress",
-            year: "2025",
-            title: "Emergency Contact App",
-            results: [
-                { title: "Reduced emergency response trigger time by 40% with highly optimized mobile notification flows" },
-                { title: "Implemented secure biometric-gated access for sensitive emergency health records" },
-                { title: "Architected a crash-resistant mobile experience with 99.99% error-free runtime sessions" },
-            ],
-            link: "@/assets/images/destress.jpg",
-            image: distressapp,
-            linkText: "View Screenshots",
-            tags: ["Android", "React Native", "Safety Tech"],
         },
         {
             company: "BuildAfrique",
