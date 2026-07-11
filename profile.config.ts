@@ -41,7 +41,6 @@ import PandasIcon from "@/assets/icons/toolbox/pandas.svg";
 import JupyterIcon from "@/assets/icons/toolbox/jupyter.svg";
 import DbtIcon from "@/assets/icons/toolbox/dbt.svg";
 import SparkIcon from "@/assets/icons/toolbox/spark.svg";
-import localSocialPostmanPage from "@/assets/images/local-social-postman-page.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 
 const CONFIG = {
@@ -216,57 +215,6 @@ const CONFIG = {
             iconType: SparkIcon,
         },
     ],
-    hobbies: [
-        {
-            title: "Singing Alone",
-            emoji: "🎤",
-            left: "5%",
-            top: "3%",
-            zIndex: 0,
-        },
-        {
-            title: "Photography",
-            emoji: "📸",
-            left: "50%",
-            top: "3%",
-            zIndex: 0,
-        },
-        {
-            title: "Gaming",
-            emoji: "🎮",
-            left: "10%",
-            top: "33%",
-            zIndex: 0,
-        },
-        {
-            title: "Music",
-            emoji: "🎵",
-            left: "35%",
-            top: "40%",
-            zIndex: -10,
-        },
-        {
-            title: "Meetups",
-            emoji: "👥",
-            left: "70%",
-            top: "45%",
-            zIndex: 0,
-        },
-        {
-            title: "Workout & Fitness",
-            emoji: "🏋️",
-            left: "5%",
-            top: "65%",
-            zIndex: 0,
-        },
-        {
-            title: "Reading",
-            emoji: "📚",
-            left: "45%",
-            top: "70%",
-            zIndex: 0,
-        },
-    ],    
     footerLinks: [
         {
             title: "Github",
@@ -297,48 +245,6 @@ const CONFIG = {
             tags: ["Technical Leadership", "System Architecture", "Full-Stack Development"],
         },
         {
-            company: "Penote",
-            year: "2024",
-            title: "Penote - Secure Note Taking",
-            results: [
-                { title: "Architected a zero-trust, local-first note-taking system for 5k+ active Android users" },
-                { title: "Implemented military-grade AES-256 encryption for ultra-secure note storage" },
-                { title: "Reduced app launch time by 40% through optimized database indexing and caching" },
-            ],
-            link: "https://play.google.com/store/apps/details?id=com.nogeybix.p3note",
-            image: "/images/penote.jpg",
-            linkText: "View on Play Store",
-            tags: ["Android", "Security", "Encryption", "Local-First"],
-        },
-        {
-            company: "Locl",
-            year: "2022",
-            title: "Backend for Social Media Platform",
-            results: [
-                { title: "Optimized geospatial search queries, reducing API response latency by 35% for 100k+ users" },
-                { title: "Built and documented 30+ highly available REST endpoints with 100% test coverage" },
-                { title: "Engineered a scalable data layer that supported a 2x increase in daily active traffic" },
-            ],
-            link: "/images/flowchart-local-social.png",
-            image: localSocialPostmanPage,
-            linkText: "View Flowchart",
-            tags: ["Node.js", "PostgreSQL", "API Design", "Geospatial"],
-        },
-        {
-            company: "Ultimate MedLink Ltd",
-            year: "2026",
-            title: "Medical Tourism Platform",
-            results: [
-                { title: "Scaled platform infrastructure to connect 300+ premium hospitals across 5 global healthcare hubs" },
-                { title: "Increased patient inquiry conversion rates by 20% through streamlined journey mapping" },
-                { title: "Managed technical integration for 50+ JCI-accredited partners across Pan-African markets" },
-            ],
-            link: "https://uml.co.ke",
-            image: "/images/uml.png",
-            linkText: "View Live Site",
-            tags: ["Next.js", "Healthcare Tech", "UI/UX", "SEO"],
-        },
-        {
             company: "GPS Travel",
             year: "2023",
             title: "Tours & Travel Platform",
@@ -367,20 +273,6 @@ const CONFIG = {
             tags: ["Next.js", "Performance", "SEO"],
         },
         {
-            company: "Penda Health",
-            year: "2022",
-            title: "Claims Processing & Internal Tools",
-            results: [
-                { title: "Automated claim reconciliation workflows, reducing processing time by 30% per agent" },
-                { title: "Developed a unified internal dashboard that eliminated data fragmentation across 3 legacy systems" },
-                { title: "Built custom reporting tools that enabled weekly cost-saving insights for senior leadership" },
-            ],
-            link: "https://pendahealth.com",
-            image: "/images/pendahealth.png",
-            linkText: "View Project",
-            tags: ["Internal Tools", "Process Optimization", "Data Analytics"],
-        },
-        {
             company: "Numida Africa",
             year: "2023",
             title: "SME Lending Application",
@@ -393,20 +285,6 @@ const CONFIG = {
             image: "/images/numidaAfrica.jpg",
             linkText: "View Project",
             tags: ["Fintech", "Security", "Scalability"],
-        },
-        {
-            company: "iCyberEnterprises LLC",
-            year: "2025",
-            title: "Web Systems & Digital Solutions",
-            results: [
-                { title: "Modernized legacy web architectures, resulting in a 50% improvement in cross-device accessibility" },
-                { title: "Implemented advanced caching strategies that reduced hosting infrastructure costs by 20%" },
-                { title: "Directed the technical integration for 10+ third-party CRM and payment gateway services" },
-            ],
-            link: "https://icyberenterprises.com",
-            image: "/images/icyber.png",
-            linkText: "View Project",
-            tags: ["Web Architecture", "Maintainability", "Integration"],
         },
         {
             company: "xGscore.io",
@@ -459,7 +337,6 @@ const CONFIG = {
 
 export const email = CONFIG.email;
 export const toolBoxItems = CONFIG.toolboxItems;
-export const hobbies = CONFIG.hobbies;
 export const footerLinks = CONFIG.footerLinks;
 export const portfolioProjects = CONFIG.portfolioProjects;
 export const testimonials = CONFIG.testimonials;

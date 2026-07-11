@@ -43,7 +43,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                     heading2="Featured Projects"
                     paragraph="From backend logic to polished UI — here’s how I bring full-stack ideas to life."
                 />
-                <div className="flex flex-col mt-10 md:mt-20">
+                <div className="flex flex-col mt-10 md:mt-20 pb-36">
                     {portfolioProjects.map((project, index) => (
                         <motion.div
                             key={project.title}
@@ -124,8 +124,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                             </Card>
                         </motion.div>
                     ))}
-                    {/* Large spacer to ensure all sticky cards can settle at the top without being pushed by the container end */}
-                    <div className="h-[60vh] md:h-[80vh] pointer-events-none" />
+
                 </div>
             </div>
         </section>
