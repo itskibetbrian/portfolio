@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { getPostSlugs, getPostBySlug } from "@/lib/blog"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://kibetbrian.com" // Update with actual domain if different
+  const baseUrl = "https://kibetbrian.codes" // Update with actual domain if different
 
   // Static routes
   const routes = ["", "/blog"].map((route) => ({

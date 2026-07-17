@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kibetbrian.com",
+    url: "https://kibetbrian.codes",
     title: "Kibet Brian | Full-Stack Software Engineer",
     description: "Kibet Brian — full-stack software engineer building production-ready web and mobile applications for startups and businesses.",
     siteName: "Kibet Brian Portfolio",
@@ -78,7 +78,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Kibet Brian",
-  url: "https://kibetbrian.com",
+  url: "https://kibetbrian.codes",
   jobTitle: "Full-Stack Software Engineer",
   worksFor: {
     "@type": "Organization",
