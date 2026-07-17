@@ -1,36 +1,54 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# v0 runtime files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
 
-# dependencies
-/node_modules
-/.pnp
+# Dependencies
+node_modules
+.pnp
 .pnp.js
-.yarn/install-state.gz
 
-# testing
-/coverage
+# Next.js build outputs
+.next/
+out/
+build/
+dist/
 
-# next.js
-/.next/
-/out/
+# TypeScript / build artifacts
+*.tsbuildinfo
+next-env.d.ts
 
-# production
-/build
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
 
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# local env files
-.env*.local
+# Caches
+.cache/
+.eslintcache
+.turbo
 
-# vercel
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Misc
+*.pem
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts

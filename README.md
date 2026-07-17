@@ -1,75 +1,94 @@
-# Kibet Brian - Portfolio Website
+# Kibet Brian | Full-Stack Software Engineer Portfolio
 
-**🚀 Overview:**
-This is a modern, responsive portfolio website built with **Next.js 14**, **React 18**, and **Tailwind CSS**. It serves as my personal homepage, project showcase, and contact point.
+A high-performance, SEO-optimized, neo-brutalism themed developer portfolio built with **Next.js 15**, **React**, and **Tailwind CSS**. 
 
-* **Live Demo:** [portfolio](https://kibetbrian.codes)
+Designed to showcase technical expertise, recent project impact, and a comprehensive suite of services.
 
-**✨ Features**
-* Responsive design for desktop, tablet, and mobile
-* Project and skills showcase
-* Smooth scrolling navigation with active sections
-* Interactive testimonials section
-* Contact form integration
-* Built with performance and accessibility in mind
+---
 
-**🛠️ Tech Stack**
-* Next.js 14
-* React 18
-* TypeScript
-* Tailwind CSS
+## 🚀 Features
 
-**📁 Project Structure**
+- **Neo-Brutalism Design:** Distinctive, bold aesthetics with thick borders, hard shadows, and vibrant accent colors.
+- **Performance First:** Optimized for maximum Lighthouse scores, utilizing Next.js Image component and minimal footprint assets.
+- **Technical SEO:** Built-in rich metadata, Open Graph (OG) tags, Twitter cards, and GoogleBot directives to ensure excellent search visibility.
+- **Responsive Architecture:** Fully optimized for all screen sizes, including custom mobile-specific UI behaviors (e.g., adaptive floating buttons).
+- **Dynamic Animations:** Smooth hover transitions, scaling effects, and an infinite-scrolling logo marquee.
+- **Component-Driven:** Clean, modular React architecture making it extremely easy to add new sections or update content.
 
-```
-├── public/            # Static assets (images, PDFs, SVGs)
-├── src/
-│   ├── app/           # Next.js app directory (pages, layout, styles)
-│   ├── assets/        # SVG icons, images
-│   ├── components/    # Reusable React components
-│   └── sections/      # Page sections (About, Projects, etc.)
-├── tailwind.config.ts # Tailwind CSS config
-├── next.config.mjs    # Next.js config
-├── package.json       # Project metadata and scripts
-└── ...
-```
+---
 
-**🧑‍💻 Getting Started**
-**Prerequisites**
-* Node.js (v18+)
-* npm / yarn or pnpm
+## 🛠 Tech Stack
 
-**Installation**
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Fonts:** Geist Mono & Onest (via `next/font/google`)
 
-```bash
-# Clone the repository
-git clone https://github.com/kib3tbrian/portfolio.git
-cd portfolio
+---
 
-# Install dependencies
-npm install
-```
+## 💻 Getting Started
 
-**Development**
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18.x or newer) installed.
 
-```bash
-# Start the local dev server
-npm run dev
-```
+### Installation
 
-Visit http://localhost:3000 to view the site.
+1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone https://github.com/itskibetbrian/portfolio.git
+   cd portfolio
+   ```
 
-**Build for Production**
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   # or
+   yarn install
+   ```
 
-```bash
-npm run build
-npm start
-```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-**📝 Customization**
-* Update content in `src/sections/` components
-* Edit styles in `src/app/globals.css` or Tailwind classes
-* Modify fonts in `src/app/layout.tsx`
+4. **Open in Browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the site.
 
-**📄 License**
-This project is open source and available under the MIT License.
+---
+
+## 📂 Project Structure
+
+- `app/`: Contains the Next.js App Router core files (`layout.tsx`, `page.tsx`, `globals.css`).
+- `components/`: Contains all modular UI sections (`hero-section.tsx`, `portfolio-section.tsx`, `navigation.tsx`, etc.).
+- `public/`: Static assets including `favicon.ico`, `icon.svg`, and the `images/` directory.
+
+---
+
+## 🎨 Customization Guide
+
+### Updating Personal Information
+Most personal details (bio, results, tags) are hardcoded into the component files for maximum performance.
+- **Hero & General Bio:** Edit `components/hero-section.tsx`
+- **Tech Stack:** Edit the `toolboxItems` array in `components/about-section.tsx`
+- **Projects:** Edit the `portfolioProjects` array in `components/portfolio-section.tsx`
+- **Social Links:** Edit the `href` attributes in `components/footer.tsx` and `components/navigation.tsx`
+
+### Updating Images & Assets
+To replace placeholder illustrations or avatars:
+1. Place your new images into the `public/images/` directory.
+2. Ensure they are optimized (WebP or compressed PNG/JPG).
+3. Update the corresponding `<Image src="..." />` paths in the components.
+   - *Example:* The hero avatar can be changed in `components/hero-section.tsx` by replacing `/images/avatar-illustration.png`.
+
+### Updating SEO
+Global SEO settings (Title, Description, Keywords, Open Graph URLs) can be modified inside `app/layout.tsx` in the exported `metadata` object.
+
+---
+
+## 📜 License & Credits
+
+Built by [Kibet Brian](https://github.com/itskibetbrian).
+*Original layout inspired by the Paperfolio template design by Brix Templates.*
