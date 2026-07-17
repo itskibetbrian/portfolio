@@ -61,7 +61,7 @@ export function PortfolioSection() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 font-semibold text-[#0B0B0B] dark:text-white hover:gap-3 transition-all text-sm md:text-base"
+                      className="inline-flex items-center justify-center gap-2 font-bold text-black dark:text-white transition-all text-sm md:text-base px-5 py-2.5 border-[3px] border-black dark:border-white rounded-xl bg-white dark:bg-neutral-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.15)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.25)] active:translate-y-[2px] active:shadow-none hover:gap-3"
                     >
                       {project.linkText}
                       <ArrowRight className="w-4 h-4" />

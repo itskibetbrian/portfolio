@@ -29,17 +29,28 @@ export function Footer() {
                     <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white">Subscribe to my newsletter</h3>
                   </div>
 
-                  <div className="relative w-full md:w-auto md:min-w-[400px] lg:min-w-[480px]">
+                  <form 
+                    onSubmit={(e) => {
+                      e.preventDefault()
+                      const input = e.currentTarget.querySelector('input')
+                      if (input?.value) {
+                        toast.success("Successfully subscribed to the newsletter!")
+                        input.value = ''
+                      }
+                    }}
+                    className="relative w-full md:w-auto md:min-w-[400px] lg:min-w-[480px]"
+                  >
                     <Input
                       type="email"
+                      required
                       placeholder="Enter your email address"
                       aria-label="Email address"
                       className="border-4 border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl px-4 md:px-6 h-14 md:h-16 pr-32 md:pr-44 text-base md:text-lg placeholder:text-gray-500"
                     />
-                    <Button className="absolute right-2 top-2 bottom-2 bg-black dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 rounded-[10px] px-6 md:px-10 text-sm md:text-base font-semibold whitespace-nowrap h-auto active:scale-95 transition-transform">
+                    <Button type="submit" className="absolute right-2 top-2 bottom-2 bg-black dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 rounded-[10px] px-6 md:px-10 text-sm md:text-base font-semibold whitespace-nowrap h-auto active:scale-95 transition-transform">
                       Subscribe
                     </Button>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
