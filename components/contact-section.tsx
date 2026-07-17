@@ -14,10 +14,10 @@ export function ContactSection() {
 
   async function handleSubmit(formData: FormData) {
     setIsPending(true)
-    
+
     try {
       const result = await sendEmail(formData)
-      
+
       if (result.error) {
         toast.error(result.error)
       } else {
@@ -51,32 +51,32 @@ export function ContactSection() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-bold text-black dark:text-white">Your Name</label>
-                <Input 
-                  id="name" 
-                  name="name" 
-                  placeholder="John Doe" 
-                  required 
+                <Input
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  required
                   className="h-14 border-[3px] border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl focus-visible:ring-black dark:focus-visible:ring-white"
                 />
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-bold text-black dark:text-white">Email Address</label>
-                <Input 
-                  id="email" 
-                  name="email" 
-                  type="email" 
-                  placeholder="john@example.com" 
-                  required 
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="john@example.com"
+                  required
                   className="h-14 border-[3px] border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl focus-visible:ring-black dark:focus-visible:ring-white"
                 />
               </div>
               <div className="space-y-2">
                 <label htmlFor="phone" className="text-sm font-bold text-black dark:text-white">Phone Number <span className="text-neutral-500 font-normal">(Optional)</span></label>
-                <Input 
-                  id="phone" 
-                  name="phone" 
-                  type="tel" 
-                  placeholder="+1 (555) 000-0000" 
+                <Input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+1 (555) 000-0000"
                   className="h-14 border-[3px] border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl focus-visible:ring-black dark:focus-visible:ring-white"
                 />
               </div>
@@ -100,29 +100,30 @@ export function ContactSection() {
               </div>
               <div className="space-y-2 md:col-span-2">
                 <label htmlFor="attachment" className="text-sm font-bold text-black dark:text-white">Project Scope / Supporting Docs <span className="text-neutral-500 font-normal">(Optional)</span></label>
-                <Input 
-                  id="attachment" 
-                  name="attachment" 
-                  type="file" 
+                <Input
+                  id="attachment"
+                  name="attachment"
+                  type="file"
                   accept=".pdf,.docx"
-                  className="h-14 pt-3 border-[3px] border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl focus-visible:ring-black dark:focus-visible:ring-white file:border-0 file:bg-transparent file:text-sm file:font-bold file:text-black dark:file:text-white file:mr-4 file:cursor-pointer hover:file:opacity-70"
+                  className="w-full h-14 px-3 py-2 border-[3px] border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl focus-visible:ring-black dark:focus-visible:ring-white file:border-[3px] file:border-black dark:file:border-white file:bg-white dark:file:bg-neutral-900 file:text-sm file:font-bold file:text-black dark:file:text-white file:mr-4 file:px-4 file:py-1 file:rounded-lg file:cursor-pointer file:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:file:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.15)] hover:file:translate-y-[1px] hover:file:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] file:transition-all"
                 />
+                <p className="text-xs text-neutral-500 font-medium pt-1">Only PDF, DOC and DOCX supported (MAX 10MB)</p>
               </div>
             </div>
-            
+
             <div className="space-y-2">
               <label htmlFor="message" className="text-sm font-bold text-black dark:text-white">Message</label>
-              <Textarea 
-                id="message" 
-                name="message" 
-                placeholder="Tell me about your project..." 
-                required 
+              <Textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project..."
+                required
                 className="min-h-[160px] resize-none border-[3px] border-black dark:border-neutral-700 bg-white dark:bg-neutral-800 text-black dark:text-white rounded-xl p-4 focus-visible:ring-black dark:focus-visible:ring-white"
               />
             </div>
 
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               disabled={isPending}
               className="w-full h-16 bg-black dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 rounded-xl text-lg font-bold flex items-center justify-center gap-2 active:translate-y-[2px] transition-transform"
             >
