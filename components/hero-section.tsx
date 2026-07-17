@@ -55,7 +55,7 @@ export function HeroSection() {
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-7 pt-4">
               <Button asChild className="bg-[#0B0B0B] dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 rounded-lg py-5 px-8 md:py-[22px] md:px-[62px] text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-[240px] active:translate-y-[2px] active:shadow-none transition-all">
-                <a href="mailto:its.kibetbrian@gmail.com">
+                <a href="/#contact">
                   <Mail className="w-5 h-5" />
                   Get in touch
                 </a>

@@ -6,20 +6,24 @@ import { AboutSection } from "@/components/about-section"
 import { PortfolioSection } from "@/components/portfolio-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ArticlesSection } from "@/components/articles-section"
+import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-neutral-950 transition-colors">
+    <div className="min-h-screen bg-[#FDFBF7] dark:bg-neutral-950 transition-colors">
       <Navigation />
-      <HeroSection />
-      <LogoMarquee />
-      <ServicesSection />
-      <AboutSection />
-      <PortfolioSection />
-      <TestimonialsSection />
-      <ArticlesSection />
+      <main>
+        <HeroSection />
+        <LogoMarquee />
+        <ServicesSection />
+        <AboutSection />
+        <PortfolioSection />
+        <TestimonialsSection />
+        <ArticlesSection />
+        <ContactSection />
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }

@@ -61,7 +61,7 @@ export function ServicesSection() {
                   Looking for another service? Get in touch with me, there is a high chance that I will be able to help!
                 </p>
                 <Button asChild className="bg-black text-white hover:bg-black/90 rounded-[16px] px-12 py-6 font-medium text-[18px] w-full max-w-[340px] h-[64px] active:translate-y-[2px] active:shadow-none transition-all">
-                  <a href="mailto:its.kibetbrian@gmail.com">
+                  <a href="/#contact">
                     <Mail className="w-5 h-5 mr-2" />
                     Get in touch
                   </a>

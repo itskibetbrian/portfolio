@@ -31,7 +31,7 @@ export function Navigation() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <Button asChild className="bg-black dark:bg-white text-white dark:text-black hover:bg-black/90 dark:hover:bg-white/90 rounded-sm px-5 h-12 min-w-[48px] flex-shrink-0">
-            <a href="mailto:its.kibetbrian@gmail.com" aria-label="Send email to Kibet Brian">
+            <a href="/#contact" aria-label="Go to contact page">
               <Mail className="w-10 h-10" strokeWidth={2.5} />
             </a>
           </Button>

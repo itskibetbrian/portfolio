@@ -99,6 +99,8 @@ const jsonLd = {
   ],
 }
 
+import { Toaster } from "sonner"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -115,6 +117,7 @@ export default function RootLayout({
       <body className={`${onest.variable} font-sans antialiased overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
+          <Toaster position="bottom-right" richColors />
         </ThemeProvider>
       </body>
     </html>

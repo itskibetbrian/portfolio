@@ -60,33 +60,49 @@ export const services = [
 
 // ─── About / Toolbox Section ─────────────────────────────────────────────────
 
-export const toolboxItems = [
-  { title: "Python", iconUrl: "https://skillicons.dev/icons?i=python" },
-  { title: "TypeScript", iconUrl: "https://skillicons.dev/icons?i=ts" },
-  { title: "PHP", iconUrl: "https://skillicons.dev/icons?i=php" },
-  { title: "Go", iconUrl: "https://skillicons.dev/icons?i=go" },
-  { title: "Bash", iconUrl: "https://skillicons.dev/icons?i=bash" },
-  { title: "React", iconUrl: "https://skillicons.dev/icons?i=react" },
-  { title: "Next.js", iconUrl: "https://skillicons.dev/icons?i=nextjs" },
-  { title: "Tailwind CSS", iconUrl: "https://skillicons.dev/icons?i=tailwind" },
-  { title: "Flutter", iconUrl: "https://skillicons.dev/icons?i=flutter" },
-  { title: "NestJS", iconUrl: "https://skillicons.dev/icons?i=nestjs" },
-  { title: "FastAPI", iconUrl: "https://skillicons.dev/icons?i=fastapi" },
-  { title: "Node.js", iconUrl: "https://skillicons.dev/icons?i=nodejs" },
-  { title: "Prisma", iconUrl: "https://skillicons.dev/icons?i=prisma" },
-  { title: "PostgreSQL", iconUrl: "https://skillicons.dev/icons?i=postgres" },
-  { title: "MongoDB", iconUrl: "https://skillicons.dev/icons?i=mongodb" },
-  { title: "Supabase", iconUrl: "https://skillicons.dev/icons?i=supabase" },
-  { title: "Redis", iconUrl: "https://skillicons.dev/icons?i=redis" },
-  { title: "Firebase", iconUrl: "https://skillicons.dev/icons?i=firebase" },
-  { title: "PyTorch", iconUrl: "https://skillicons.dev/icons?i=pytorch" },
-  { title: "TensorFlow", iconUrl: "https://skillicons.dev/icons?i=tensorflow" },
-  { title: "AWS", iconUrl: "https://skillicons.dev/icons?i=aws" },
-  { title: "Docker", iconUrl: "https://skillicons.dev/icons?i=docker" },
-  { title: "GitHub Actions", iconUrl: "https://skillicons.dev/icons?i=githubactions" },
-  { title: "Vercel", iconUrl: "https://skillicons.dev/icons?i=vercel" },
-  { title: "Linux", iconUrl: "https://skillicons.dev/icons?i=linux" },
-  { title: "Git", iconUrl: "https://skillicons.dev/icons?i=git" },
+export const toolboxCategories = [
+  {
+    name: "Languages",
+    items: [
+      { title: "TypeScript", iconUrl: "https://skillicons.dev/icons?i=ts" },
+      { title: "Python", iconUrl: "https://skillicons.dev/icons?i=python" },
+      { title: "Go", iconUrl: "https://skillicons.dev/icons?i=go" },
+    ],
+  },
+  {
+    name: "Frontend",
+    items: [
+      { title: "React", iconUrl: "https://skillicons.dev/icons?i=react" },
+      { title: "Next.js", iconUrl: "https://skillicons.dev/icons?i=nextjs" },
+      { title: "Tailwind CSS", iconUrl: "https://skillicons.dev/icons?i=tailwind" },
+    ],
+  },
+  {
+    name: "Backend & DB",
+    items: [
+      { title: "Node.js", iconUrl: "https://skillicons.dev/icons?i=nodejs" },
+      { title: "PostgreSQL", iconUrl: "https://skillicons.dev/icons?i=postgres" },
+      { title: "Redis", iconUrl: "https://skillicons.dev/icons?i=redis" },
+      { title: "Supabase", iconUrl: "https://skillicons.dev/icons?i=supabase" },
+    ],
+  },
+  {
+    name: "Mobile",
+    items: [
+      { title: "React Native", iconUrl: "https://skillicons.dev/icons?i=react" },
+      { title: "Kotlin", iconUrl: "https://skillicons.dev/icons?i=kotlin" },
+      { title: "Swift", iconUrl: "https://skillicons.dev/icons?i=swift" },
+    ],
+  },
+  {
+    name: "DevOps & AI",
+    items: [
+      { title: "AWS", iconUrl: "https://skillicons.dev/icons?i=aws" },
+      { title: "Docker", iconUrl: "https://skillicons.dev/icons?i=docker" },
+      { title: "GitHub Actions", iconUrl: "https://skillicons.dev/icons?i=githubactions" },
+      { title: "PyTorch", iconUrl: "https://skillicons.dev/icons?i=pytorch" },
+    ],
+  },
 ]
 
 // ─── Portfolio Section ───────────────────────────────────────────────────────
