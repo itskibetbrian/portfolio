@@ -1,0 +1,62 @@
+---
+title: "Building Scalable APIs: Lessons from Production"
+date: "2024-11-15"
+category: "Resources"
+excerpt: "Key patterns and anti-patterns I've learned from building APIs that serve millions of requests — from rate limiting to database pooling."
+coverImage: "/images/article-design-tools.png"
+---
+
+# Building Scalable APIs: Lessons from Production
+
+After years of shipping backend systems that handle real-world traffic, I've distilled the patterns that consistently separate fragile prototypes from battle-tested production APIs.
+
+## 1. Rate Limiting Is Not Optional
+
+Every public-facing API needs rate limiting from day one. I use a sliding window counter backed by Redis:
+
+```typescript
+const rateLimiter = new RateLimiter({
+  windowMs: 60 * 1000,
+  max: 100,
+  store: new RedisStore({ client: redisClient }),
+});
+```
+
+This approach is horizontally scalable — each instance shares the same Redis counter, so spinning up more servers doesn't break your limits.
+
+## 2. Database Connection Pooling
+
+One of the most common performance killers I see is opening a new database connection per request. Instead, use a connection pool:
+
+- **Minimum pool size**: Set this to your baseline concurrent request count
+- **Maximum pool size**: Keep this below your database's `max_connections`
+- **Idle timeout**: Reclaim connections that have been idle for 30+ seconds
+
+## 3. Structured Error Responses
+
+Never return raw error messages. I use a consistent error envelope:
+
+```json
+{
+  "error": {
+    "code": "VALIDATION_FAILED",
+    "message": "Email address is required",
+    "field": "email",
+    "requestId": "req_abc123"
+  }
+}
+```
+
+The `requestId` is crucial for debugging — it links client errors to server-side logs.
+
+## 4. Graceful Degradation
+
+When a downstream service is down, your API shouldn't crash. Circuit breakers prevent cascading failures:
+
+- **Closed**: Requests flow normally
+- **Open**: Requests fail fast with a cached or default response
+- **Half-Open**: A single test request checks if the downstream service has recovered
+
+## Key Takeaways
+
+These patterns aren't theoretical — they're battle-tested across fintech platforms processing millions in transactions and analytics dashboards serving 10k+ concurrent users. Start with rate limiting and connection pooling, then layer in structured errors and circuit breakers as your traffic grows.

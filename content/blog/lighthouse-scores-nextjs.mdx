@@ -1,0 +1,65 @@
+---
+title: "Achieving 100/100 Lighthouse Scores in Next.js"
+date: "2024-09-20"
+category: "Articles"
+excerpt: "Performance optimization strategies for modern web applications — from image optimization to code splitting."
+coverImage: "/images/article-font-sizes.png"
+---
+
+# Achieving 100/100 Lighthouse Scores in Next.js
+
+Getting a perfect Lighthouse score isn't just about bragging rights — it directly impacts user retention, conversion rates, and SEO rankings. Here's how I consistently hit 100/100 across all four categories.
+
+## Performance
+
+### Image Optimization
+
+Next.js `<Image>` component is your best friend. It handles:
+
+- **Automatic format conversion**: Serves WebP/AVIF to supported browsers
+- **Responsive sizing**: Generates multiple sizes and serves the right one
+- **Lazy loading**: Images below the fold load only when needed
+
+```tsx
+<Image
+  src="/hero.jpg"
+  alt="Hero image"
+  width={1200}
+  height={600}
+  priority // Only for above-the-fold images
+/>
+```
+
+### Code Splitting
+
+Next.js does route-level code splitting automatically, but you should also dynamically import heavy components:
+
+```tsx
+const HeavyChart = dynamic(() => import('./HeavyChart'), {
+  loading: () => <ChartSkeleton />,
+  ssr: false,
+});
+```
+
+## Accessibility
+
+- Every `<img>` needs a meaningful `alt` attribute
+- Interactive elements need visible focus indicators
+- Color contrast ratios must meet WCAG AA (4.5:1 for body text)
+- Use semantic HTML: `<nav>`, `<main>`, `<article>`, `<section>`
+
+## Best Practices
+
+- Serve assets over HTTPS
+- Use `rel="noopener noreferrer"` on external links
+- Avoid `document.write()`
+- Keep your JavaScript bundle lean
+
+## SEO
+
+- Every page needs a unique `<title>` and `<meta description>`
+- Use a single `<h1>` per page with proper heading hierarchy
+- Add structured data (JSON-LD) for rich search results
+- Generate a `sitemap.xml` and `robots.txt`
+
+These optimizations are cumulative — each one moves the needle. Start with images and code splitting for the biggest impact.

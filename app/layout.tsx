@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 import { Onest, Geist_Mono as V0_Font_Geist_Mono } from "next/font/google"
+import { ThemeProvider } from "next-themes"
 
 // Initialize fonts
 const _geistMono = V0_Font_Geist_Mono({
@@ -72,14 +73,50 @@ export const metadata: Metadata = {
   },
 }
 
+// JSON-LD structured data for SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Kibet Brian",
+  url: "https://kibetbrian.com",
+  jobTitle: "Full-Stack Software Engineer",
+  worksFor: {
+    "@type": "Organization",
+    name: "Nogeybix Labs",
+    url: "https://nogeybix.com",
+  },
+  sameAs: [
+    "https://github.com/itskibetbrian",
+    "https://t.me/uyscvtii",
+    "https://discord.com/users/945739329517522974",
+  ],
+  knowsAbout: [
+    "Web Development",
+    "Mobile Development",
+    "System Architecture",
+    "API Design",
+    "Performance Optimization",
+  ],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${onest.variable} font-sans antialiased overflow-x-hidden`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className={`${onest.variable} font-sans antialiased overflow-x-hidden`}>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

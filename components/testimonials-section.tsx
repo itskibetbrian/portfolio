@@ -1,57 +1,62 @@
 "use client"
 
+import { ScrollAnimate } from "@/components/scroll-animate"
 import Image from "next/image"
 
 export function TestimonialsSection() {
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 pt-4 md:pt-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-[1.3]">
-            What my clients say
-            <br />
-            about <span className="bg-[#2F81F7] text-white px-3 py-1 inline-block">my work</span>
-          </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto pb-8">
-            Don't just take my word for it. See what my clients have to say about my work.
-          </p>
-        </div>
+        <ScrollAnimate variant="fade-up">
+          <div className="text-center mb-12 pt-4 md:pt-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-[1.3] text-black dark:text-white">
+              What my clients say
+              <br />
+              about <span className="bg-[#2F81F7] text-white px-3 py-1 inline-block">my work</span>
+            </h2>
+            <p className="text-gray-600 dark:text-neutral-400 text-base md:text-lg max-w-2xl mx-auto pb-8">
+              Don't just take my word for it. See what my clients have to say about my work.
+            </p>
+          </div>
+        </ScrollAnimate>
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="relative">
-            <div className="bg-white border-4 border-black rounded-3xl py-8 md:py-14 px-6 md:px-8 md:pr-72 lg:pr-72">
-              <div className="absolute -top-6 md:-top-8 left-6 md:left-8 w-12 h-12 md:w-16 md:h-16">
-                <Image
-                  src="/images/quote-mark.png"
-                  alt="Quote"
-                  width={64}
-                  height={64}
-                  className="w-full h-full"
-                />
-              </div>
+        <ScrollAnimate variant="scale-up" delay={0.15}>
+          <div className="relative max-w-5xl mx-auto">
+            <div className="relative">
+              <div className="bg-white dark:bg-neutral-900 border-4 border-black dark:border-white rounded-3xl py-8 md:py-14 px-6 md:px-8 md:pr-72 lg:pr-72">
+                <div className="absolute -top-6 md:-top-8 left-6 md:left-8 w-12 h-12 md:w-16 md:h-16">
+                  <Image
+                    src="/images/quote-mark.png"
+                    alt="Quote"
+                    width={64}
+                    height={64}
+                    className="w-full h-full"
+                  />
+                </div>
 
-              <div className="md:max-w-[65%]">
-                <p className="text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
-                  Brian is a top-tier engineer who transformed our complex construction platform into a high-performance digital asset. His ability to navigate both technical architecture and user experience is rare. We've seen a marked increase in engagement since the launch.
-                </p>
+                <div className="md:max-w-[65%]">
+                  <p className="text-sm md:text-base lg:text-lg mb-6 leading-relaxed text-black dark:text-neutral-200">
+                    Brian is a top-tier engineer who transformed our complex construction platform into a high-performance digital asset. His ability to navigate both technical architecture and user experience is rare. We've seen a marked increase in engagement since the launch.
+                  </p>
 
-                <div>
-                  <div className="font-bold text-base md:text-lg">Mr. Chege Njoroge</div>
-                  <div className="text-gray-600 text-sm md:text-base">Group CEO @ BuildAfrique</div>
+                  <div>
+                    <div className="font-bold text-base md:text-lg text-black dark:text-white">Mr. Chege Njoroge</div>
+                    <div className="text-gray-600 dark:text-neutral-400 text-sm md:text-base">Group CEO @ BuildAfrique</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full overflow-hidden hidden lg:block border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-              <Image
-                src="/images/avatar-illustration.png"
-                alt="Mr. Chege Njoroge"
-                fill
-                className="object-cover"
-              />
+              <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full overflow-hidden hidden lg:block border-4 border-black dark:border-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]">
+                <Image
+                  src="/images/avatar-illustration.png"
+                  alt="Mr. Chege Njoroge"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   )

@@ -1,0 +1,69 @@
+---
+title: "Real-time Data Streaming at Scale: Architecture Patterns"
+date: "2024-07-10"
+category: "News"
+excerpt: "Handling 10k+ concurrent users with efficient data pipelines — WebSockets, SSE, and message queues."
+coverImage: "/images/article-exercises.png"
+---
+
+# Real-time Data Streaming at Scale
+
+When xGscore.io needed to push live sports analytics to 10,000+ concurrent users, traditional REST polling wasn't going to cut it. Here's the architecture that made it work.
+
+## Choosing the Right Protocol
+
+| Protocol | Use Case | Overhead |
+|----------|----------|----------|
+| WebSockets | Bidirectional, low-latency | Medium |
+| Server-Sent Events (SSE) | Server → Client only | Low |
+| Long Polling | Fallback for legacy clients | High |
+
+For our use case — pushing match data updates to clients — **SSE** was the clear winner. It's simpler than WebSockets, uses standard HTTP, and reconnects automatically.
+
+## The Architecture
+
+```
+[Data Ingestion] → [Redis Pub/Sub] → [SSE Gateway] → [Clients]
+                                    ↘ [REST API Cache]
+```
+
+### 1. Data Ingestion Layer
+
+Raw match data arrives from multiple providers. A Node.js worker normalizes and deduplicates events before publishing to Redis.
+
+### 2. Redis Pub/Sub
+
+Redis acts as the message bus between ingestion workers and SSE gateways. Each gateway subscribes to the channels its connected clients care about.
+
+### 3. SSE Gateway
+
+The gateway maintains open HTTP connections to clients and pushes events as they arrive from Redis:
+
+```typescript
+app.get('/stream/:matchId', (req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache',
+    Connection: 'keep-alive',
+  });
+
+  const subscriber = redis.subscribe(`match:${req.params.matchId}`);
+  subscriber.on('message', (data) => {
+    res.write(`data: ${data}\n\n`);
+  });
+
+  req.on('close', () => subscriber.unsubscribe());
+});
+```
+
+## Scaling Horizontally
+
+The key insight: SSE gateways are stateless beyond their open connections. We run multiple gateway instances behind a load balancer with sticky sessions (by match ID, not user).
+
+This architecture handled 15k concurrent connections during peak match times with sub-100ms delivery latency.
+
+## Lessons Learned
+
+1. **Backpressure matters**: If a client can't keep up, buffer events and drop oldest-first
+2. **Monitor connection counts**: Set alerts at 80% capacity
+3. **Graceful reconnection**: Clients should reconnect with a `Last-Event-ID` header to avoid data gaps

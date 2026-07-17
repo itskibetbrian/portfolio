@@ -37,22 +37,29 @@
   --sidebar-accent-foreground: #171717;
   --sidebar-border: #e5e5e5;
   --sidebar-ring: #a1a1a1;
+
+  /* Neo-brutalist tokens */
+  --border-strong: #000000;
+  --shadow-brutalist: rgba(0, 0, 0, 1);
+  --shadow-brutalist-hover: rgba(0, 0, 0, 1);
+  --surface-elevated: #ffffff;
+  --surface-muted: #ededed;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #fafafa;
-  --card: #191919;
+  --card: #171717;
   --card-foreground: #fafafa;
-  --popover: #262626;
+  --popover: #1a1a1a;
   --popover-foreground: #fafafa;
-  --primary: #737373;
-  --primary-foreground: #fafafa;
+  --primary: #fafafa;
+  --primary-foreground: #0a0a0a;
   --secondary: #262626;
   --secondary-foreground: #fafafa;
   --muted: #262626;
   --muted-foreground: #a1a1a1;
-  --accent: #404040;
+  --accent: #262626;
   --accent-foreground: #fafafa;
   --destructive: #ff6467;
   --destructive-foreground: #262626;
@@ -72,6 +79,13 @@
   --sidebar-accent-foreground: #fafafa;
   --sidebar-border: #ffffff;
   --sidebar-ring: #525252;
+
+  /* Neo-brutalist tokens (dark) */
+  --border-strong: #ffffff;
+  --shadow-brutalist: rgba(255, 255, 255, 0.15);
+  --shadow-brutalist-hover: rgba(255, 255, 255, 0.25);
+  --surface-elevated: #171717;
+  --surface-muted: #262626;
 }
 
 @theme inline {
@@ -122,6 +136,20 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Smooth theme transition */
+html {
+  transition: color-scheme 0.3s ease;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body,
+body * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.15s ease, box-shadow 0.3s ease;
 }
 
 /* Adding marquee animation for infinite scrolling logo stripe */
