@@ -83,7 +83,7 @@ export const toolboxCategories = [
       { title: "Node.js", iconUrl: "https://skillicons.dev/icons?i=nodejs" },
       { title: "PostgreSQL", iconUrl: "https://skillicons.dev/icons?i=postgres" },
       { title: "Redis", iconUrl: "https://skillicons.dev/icons?i=redis" },
-      { title: "Supabase", iconUrl: "https://skillicons.dev/icons?i=supabase" },
+      { title: "FastAPI", iconUrl: "https://skillicons.dev/icons?i=fastapi" },
     ],
   },
   {
