@@ -91,4 +91,3 @@ Global SEO settings (Title, Description, Keywords, Open Graph URLs) can be modif
 ## 📜 License & Credits
 
 Built by [Kibet Brian](https://github.com/itskibetbrian).
-*Original layout inspired by the Paperfolio template design by Brix Templates.*
