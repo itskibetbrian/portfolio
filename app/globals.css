@@ -138,6 +138,31 @@
   }
 }
 
+/* Shared blog/article typography for the `.prose` renderer.
+   The Tailwind v4 typography plugin is not installed, so the `prose-*`
+   utilities are no-ops. These rules live in the shared stylesheet so every
+   blog article inherits them automatically. Spacing uses the `--spacing`
+   token scale (0.25rem per step) to stay on the design system. */
+.prose h2,
+.prose h3 {
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: calc(var(--spacing) * 16);
+  margin-bottom: calc(var(--spacing) * 4);
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: calc(var(--spacing) * 12);
+  margin-bottom: calc(var(--spacing) * 3);
+}
+
 /* Smooth theme transition */
 html {
   transition: color-scheme 0.3s ease;
@@ -163,5 +188,5 @@ body * {
 }
 
 .animate-marquee {
-  animation: marquee 10s linear infinite;
+  animation: marquee 5s linear infinite;
 }

@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { mdxComponents } from "@/components/mdx-components"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -39,14 +40,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             All articles
           </Link>
 
-          <header className="mb-10">
+          <header className="mb-10 text-center">
             <span className="inline-block bg-black dark:bg-white text-white dark:text-black text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
               {meta.category}
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 text-black dark:text-white leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 text-black dark:text-white leading-tight font-serif">
               {meta.title}
             </h1>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center gap-4">
               <div className="w-10 h-10 bg-[#FDB927] border-2 border-black dark:border-white rounded-full overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/avatar-illustration.png"
@@ -56,7 +57,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   className="object-cover"
                 />
               </div>
-              <div>
+              <div className="text-left">
                 <div className="font-bold text-sm text-black dark:text-white">Kibet Brian</div>
                 <div className="text-sm text-neutral-500 dark:text-neutral-400">
                   {new Date(meta.date).toLocaleDateString("en-US", {
@@ -81,8 +82,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           )}
 
-          <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:text-neutral-700 dark:prose-p:text-neutral-300 prose-a:text-[#2F81F7] prose-a:no-underline hover:prose-a:underline prose-code:bg-neutral-100 dark:prose-code:bg-neutral-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm prose-pre:bg-neutral-900 dark:prose-pre:bg-neutral-800 prose-pre:border-2 prose-pre:border-neutral-200 dark:prose-pre:border-neutral-700 prose-pre:rounded-xl prose-img:rounded-xl prose-table:border-collapse prose-th:border prose-th:border-neutral-300 dark:prose-th:border-neutral-600 prose-th:px-4 prose-th:py-2 prose-td:border prose-td:border-neutral-300 dark:prose-td:border-neutral-600 prose-td:px-4 prose-td:py-2">
-            <MDXRemote source={content} />
+          <div className="prose prose-lg dark:prose-invert max-w-none font-sans prose-p:leading-loose prose-headings:font-bold prose-headings:font-sans prose-h1:text-3xl prose-h1:text-center prose-h2:text-2xl prose-h2:mt-16 prose-h3:text-xl prose-h3:mt-12 prose-ol:space-y-8 prose-ol:font-bold prose-li:my-2 prose-p:text-neutral-800 dark:prose-p:text-neutral-200 prose-a:text-[#2F81F7] prose-a:no-underline hover:prose-a:underline prose-code:bg-neutral-100 dark:prose-code:bg-neutral-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm prose-code:font-mono prose-img:rounded-xl prose-table:border-collapse prose-th:border prose-th:border-neutral-300 dark:prose-th:border-neutral-600 prose-th:px-4 prose-th:py-2 prose-td:border prose-td:border-neutral-300 dark:prose-td:border-neutral-600 prose-td:px-4 prose-td:py-2">
+            <MDXRemote source={content} components={mdxComponents} />
           </div>
 
           <div className="mt-16 pt-8 border-t-2 border-neutral-200 dark:border-neutral-800">

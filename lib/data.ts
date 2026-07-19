@@ -83,7 +83,7 @@ export const toolboxCategories = [
       { title: "Node.js", iconUrl: "https://skillicons.dev/icons?i=nodejs" },
       { title: "PostgreSQL", iconUrl: "https://skillicons.dev/icons?i=postgres" },
       { title: "Redis", iconUrl: "https://skillicons.dev/icons?i=redis" },
-      { title: "Supabase", iconUrl: "https://skillicons.dev/icons?i=supabase" },
+      { title: "FastAPI", iconUrl: "https://skillicons.dev/icons?i=fastapi" },
     ],
   },
   {
@@ -92,13 +92,14 @@ export const toolboxCategories = [
       { title: "React Native", iconUrl: "https://skillicons.dev/icons?i=react" },
       { title: "Kotlin", iconUrl: "https://skillicons.dev/icons?i=kotlin" },
       { title: "Swift", iconUrl: "https://skillicons.dev/icons?i=swift" },
+      { title: "Flutter", iconUrl: "https://skillicons.dev/icons?i=flutter" },
     ],
   },
   {
     name: "DevOps & AI",
     items: [
       { title: "AWS", iconUrl: "https://skillicons.dev/icons?i=aws" },
-      { title: "Docker", iconUrl: "https://skillicons.dev/icons?i=docker" },
+      { title: "Kubernetes", iconUrl: "https://skillicons.dev/icons?i=kubernetes" },
       { title: "GitHub Actions", iconUrl: "https://skillicons.dev/icons?i=githubactions" },
       { title: "PyTorch", iconUrl: "https://skillicons.dev/icons?i=pytorch" },
     ],
